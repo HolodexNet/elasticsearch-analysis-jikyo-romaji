@@ -24,7 +24,7 @@ $ gradle assemble
 # Installation
 
 ```bash
-$ sudo bin/elasticsearch-plugin install https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/archive/analysis-jikyo-romaji-7.1.0.zip
+$ sudo bin/elasticsearch-plugin install https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/download/v7.1.0/analysis-jikyo-romaji-7.1.0.zip
 ```
 
 
