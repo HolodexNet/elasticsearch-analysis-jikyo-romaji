@@ -39,7 +39,7 @@ $ sudo bin/elasticsearch-plugin install https://github.com/jikyo/elasticsearch-a
                 "char_filter": [
                     "icu_normalizer"
                 ]
-                "filter":[
+                "filter": [
                     "jikyo_romaji"
                 ]
             },
