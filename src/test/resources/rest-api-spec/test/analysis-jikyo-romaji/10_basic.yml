@@ -1,0 +1,45 @@
+# Integration tests for the analysis-jikyo-romaji plugin
+---
+"A romanization token filter for only hiraganas.":
+  - do:
+      indices.analyze:
+        body:
+          tokenizer: standard
+          filter: ["jikyo_romaji"]
+          text: "あっち"
+  - length: { tokens: 9 }
+  - match:  { tokens.0.token: "あ" }
+  - match:  { tokens.1.token: "a" }
+  - match:  { tokens.2.token: "っ" }
+  - match:  { tokens.3.token: "ltsu" }
+  - match:  { tokens.4.token: "ltu" }
+  - match:  { tokens.5.token: "xtu" }
+  - match:  { tokens.6.token: "ち" }
+  - match:  { tokens.7.token: "chi" }
+  - match:  { tokens.8.token: "ti" }
+---
+"A romanization token filter for only kanjis.":
+  - do:
+      indices.analyze:
+        body:
+          tokenizer: standard
+          filter: ["jikyo_romaji"]
+          text: "辞鏡"
+  - length: { tokens: 2 }
+  - match:  { tokens.0.token: "辞" }
+  - match:  { tokens.1.token: "鏡" }
+---
+"A romanization token filter for mixed kanjis and hiraganas.":
+  - do:
+      indices.analyze:
+        body:
+          tokenizer: standard
+          filter: ["jikyo_romaji"]
+          text: "お茶の水"
+  - length: { tokens: 6 }
+  - match:  { tokens.0.token: "お" }
+  - match:  { tokens.1.token: "o" }
+  - match:  { tokens.2.token: "茶" }
+  - match:  { tokens.3.token: "の" }
+  - match:  { tokens.4.token: "no" }
+  - match:  { tokens.5.token: "水" }

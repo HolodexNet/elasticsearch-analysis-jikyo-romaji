@@ -1,0 +1,41 @@
+// elasticsearch-analysis-jikyo-romaji
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.elasticsearch.gradle:build-tools:7.1.0'
+    }
+}
+
+apply plugin: 'elasticsearch.esplugin'
+
+def ver = [
+    plugin: '7.1.0',
+    es:     '7.1.0',
+    lucene: '8.0.0',
+    romaji: '0.0.4',
+]
+
+esplugin {
+    name 'analysis-jikyo-romaji'
+    version ver.plugin
+    description 'A token filter to romanize Japanese hiragana/katakana charcters.'
+    classname 'com.github.jikyo.elasticsearch.plugin.analysis.romaji.AnalysisRomajiPlugin'
+    licenseFile rootProject.file('LICENSE.txt')
+    noticeFile rootProject.file('NOTICE.txt')
+}
+
+dependencies {
+    implementation 'org.apache.lucene:lucene-core:' + ver.lucene
+    implementation 'org.apache.lucene:lucene-analyzers-common:' + ver.lucene
+    implementation 'org.elasticsearch:elasticsearch:' + ver.es
+
+    compile 'com.github.jikyo:romaji:' + ver.romaji
+}
+
+dependencyLicenses.enabled = false
+thirdPartyAudit.enabled = false
+licenseHeaders.enabled = false
