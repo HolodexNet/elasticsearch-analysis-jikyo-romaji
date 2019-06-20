@@ -7,7 +7,7 @@ Note that this token filter `jikyo_romaji` assumes to work with `tokenizer: keyw
 
 # Requirement
 
-* Elasticsearch 7.1.0
+* Elasticsearch 7.1.1
 * Lucene 8.0.0
 
 
@@ -24,7 +24,7 @@ $ gradle assemble
 # Installation
 
 ```bash
-$ sudo bin/elasticsearch-plugin install https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/download/v7.1.0/analysis-jikyo-romaji-7.1.0.zip
+$ sudo bin/elasticsearch-plugin install https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/download/v7.1.1/analysis-jikyo-romaji-7.1.1.zip
 ```
 
 
