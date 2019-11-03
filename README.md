@@ -7,6 +7,7 @@ Note that this token filter `jikyo_romaji` assumes to work with `tokenizer: keyw
 
 # Supported Elasticsearch versions
 
+* [7.4.2](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.2)
 * [7.4.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.1)
 * [7.4.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.0)
 * [7.3.2](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.2)
@@ -21,7 +22,7 @@ Note that this token filter `jikyo_romaji` assumes to work with `tokenizer: keyw
 # Installation
 
 ```bash
-$ sudo bin/elasticsearch-plugin install https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/download/v7.4.1/analysis-jikyo-romaji-7.4.1.zip
+$ sudo bin/elasticsearch-plugin install https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/download/v7.4.2/analysis-jikyo-romaji-7.4.2.zip
 ```
 
 
