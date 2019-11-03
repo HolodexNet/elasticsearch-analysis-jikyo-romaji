@@ -5,20 +5,11 @@
 Note that this token filter `jikyo_romaji` assumes to work with `tokenizer: keywrod`.
 
 
-# Requirement
+# Supported Elasticsearch versions
 
-* Elasticsearch 7.1.1
-* Lucene 8.0.0
-
-
-# Build
-
-```bash
-# Verification task
-$ gradle check -Dtests.security.manager=false
-# Build task
-$ gradle assemble
-```
+* [7.2.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.2.0)
+* [7.1.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.1.1)
+* [7.1.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.1.0)
 
 
 # Installation
@@ -108,4 +99,13 @@ $ curl -H "Content-Type: application/json" -XGET "localhost:9200/_analyze?pretty
     }
   ]
 }
+```
+
+# Build
+
+```bash
+# Verification task
+$ gradle check -Dtests.security.manager=false
+# Build task
+$ gradle assemble
 ```
