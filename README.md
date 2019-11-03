@@ -33,12 +33,13 @@ $ sudo bin/elasticsearch-plugin install https://github.com/jikyo/elasticsearch-a
 ### settings sample
 
 ```JSON
-            "your_analyzer":{ 
+
+            "your_analyzer": {
                 "type": "custom",
                 "tokenizer": "keyword",
                 "char_filter": [
                     "icu_normalizer"
-                ]
+                ],
                 "filter": [
                     "jikyo_romaji"
                 ]
