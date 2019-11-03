@@ -6,16 +6,16 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'org.elasticsearch.gradle:build-tools:7.2.1'
+        classpath 'org.elasticsearch.gradle:build-tools:7.3.0'
     }
 }
 
 apply plugin: 'elasticsearch.esplugin'
 
 def ver = [
-    plugin: '7.2.1',
-    es:     '7.2.1',
-    lucene: '8.0.0',
+    plugin: '7.3.0',
+    es:     '7.3.0',
+    lucene: '8.1.0',
     romaji: '0.0.4',
 ]
 
@@ -34,6 +34,12 @@ dependencies {
     implementation 'org.elasticsearch:elasticsearch:' + ver.es
 
     compile 'com.github.jikyo:romaji:' + ver.romaji
+}
+
+configurations.all {
+    resolutionStrategy.dependencySubstitution {
+        substitute project(':rest-api-spec') with module ("org.elasticsearch:rest-api-spec:${ver.es}")
+    }
 }
 
 dependencyLicenses.enabled = false
