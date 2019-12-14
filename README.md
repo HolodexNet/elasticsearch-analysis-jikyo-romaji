@@ -7,16 +7,10 @@ Note that this token filter `jikyo_romaji` assumes to work with `tokenizer: keyw
 
 # Supported Elasticsearch versions
 
-* [7.4.2](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.2)
-* [7.4.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.1)
-* [7.4.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.0)
-* [7.3.2](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.2)
-* [7.3.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.1)
-* [7.3.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.0)
-* [7.2.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.2.1)
-* [7.2.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.2.0)
-* [7.1.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.1.1)
-* [7.1.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.1.0)
+* 7.4: [7.4.2](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.2), [7.4.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.1), [7.4.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.0)
+* 7.3: [7.3.2](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.2), [7.3.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.1), [7.3.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.0)
+* 7.2: [7.2.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.2.1), [7.2.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.2.0)
+* 7.1: [7.1.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.1.1), [7.1.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.1.0)
 
 
 # Installation
