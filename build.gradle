@@ -6,18 +6,20 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'org.elasticsearch.gradle:build-tools:7.4.2'
+        classpath 'org.elasticsearch.gradle:build-tools:7.5.0'
     }
 }
 
 apply plugin: 'elasticsearch.esplugin'
 
 def ver = [
-    plugin: '7.4.2',
-    es:     '7.4.2',
-    lucene: '8.2.0',
+    plugin: '7.5.0',
+    es:     '7.5.0',
+    lucene: '8.3.0',
     romaji: '0.0.4',
 ]
+// 7.5.0: https://github.com/elastic/elasticsearch/blob/7.5/buildSrc/version.properties
+//   skipped: https://github.com/elastic/elasticsearch/issues/49787
 
 esplugin {
     name 'analysis-jikyo-romaji'
