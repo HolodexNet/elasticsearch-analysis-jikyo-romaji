@@ -10,7 +10,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'org.elasticsearch.gradle:build-tools:7.5.1'
+        classpath 'org.elasticsearch.gradle:build-tools:7.5.2'
     }
 }
 
@@ -18,8 +18,8 @@ apply plugin: 'elasticsearch.esplugin'
 
 // 7.5.0: (skipped) https://github.com/elastic/elasticsearch/issues/49787
 def ver = [
-    plugin: '7.5.1',
-    es:     '7.5.1',
+    plugin: '7.5.2',
+    es:     '7.5.2',
     lucene: '8.3.0', // https://github.com/elastic/elasticsearch/blob/master/buildSrc/version.properties
     romaji: '0.0.4',
 ]
