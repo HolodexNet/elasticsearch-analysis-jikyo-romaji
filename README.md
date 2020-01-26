@@ -7,7 +7,7 @@ Note that this token filter `jikyo_romaji` assumes to work with `tokenizer: keyw
 
 # Supported Elasticsearch versions
 
-* 7.5: ~~7.5.0~~　
+* 7.5: ~~7.5.0~~, [7.5.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.5.1)
 * 7.4: [7.4.2](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.2), [7.4.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.1), [7.4.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.4.0)
 * 7.3: [7.3.2](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.2), [7.3.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.1), [7.3.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.3.0)
 * 7.2: [7.2.1](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.2.1), [7.2.0](https://github.com/jikyo/elasticsearch-analysis-jikyo-romaji/releases/tag/v7.2.0)
@@ -25,7 +25,7 @@ $ sudo bin/elasticsearch-plugin install https://github.com/jikyo/elasticsearch-a
 
 ### settings sample
 
-```JSON
+```
             "your_analyzer": {
                 "type": "custom",
                 "tokenizer": "keyword",
@@ -109,4 +109,5 @@ $ curl -H "Content-Type: application/json" -XGET "localhost:9200/_analyze?pretty
 $ gradle check -Dtests.security.manager=false
 # Build task
 $ gradle assemble
+# see build/distributions/
 ```
