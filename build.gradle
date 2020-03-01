@@ -1,26 +1,21 @@
 // elasticsearch-analysis-jikyo-romaji
 
-// A workaround for 7.5: https://github.com/elastic/elasticsearch/issues/49787#issuecomment-562720655
-import org.elasticsearch.gradle.testclusters.TestClustersRegistry
-import org.elasticsearch.gradle.testclusters.TestClustersPlugin
-
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
     }
     dependencies {
-        classpath 'org.elasticsearch.gradle:build-tools:7.5.2'
+        classpath 'org.elasticsearch.gradle:build-tools:7.6.0'
     }
 }
 
 apply plugin: 'elasticsearch.esplugin'
 
-// 7.5.0: (skipped) https://github.com/elastic/elasticsearch/issues/49787
 def ver = [
-    plugin: '7.5.2',
-    es:     '7.5.2',
-    lucene: '8.3.0', // https://github.com/elastic/elasticsearch/blob/master/buildSrc/version.properties
+    plugin: '7.6.0',
+    es:     '7.6.0',
+    lucene: '8.4.0', // https://github.com/elastic/elasticsearch/blob/master/buildSrc/version.properties
     romaji: '0.0.4',
 ]
 
@@ -49,9 +44,3 @@ configurations.restSpec.withDependencies { dependencies ->
 dependencyLicenses.enabled = false
 thirdPartyAudit.enabled = false
 licenseHeaders.enabled = false
-
-// A workaround for 7.5: https://github.com/elastic/elasticsearch/issues/49787#issuecomment-562720655
-TestClustersRegistry registry = project.rootProject.extensions.create("testClustersRegistry", TestClustersRegistry)
-TestClustersPlugin.configureClaimClustersHook(project.gradle, registry)
-TestClustersPlugin.configureStartClustersHook(project.gradle, registry)
-TestClustersPlugin.configureStopClustersHook(project.gradle, registry)
