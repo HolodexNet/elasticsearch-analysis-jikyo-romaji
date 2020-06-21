@@ -6,15 +6,15 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'org.elasticsearch.gradle:build-tools:7.7.0'
+        classpath 'org.elasticsearch.gradle:build-tools:7.7.1'
     }
 }
 
 apply plugin: 'elasticsearch.esplugin'
 
 def ver = [
-    plugin: '7.7.0',
-    es:     '7.7.0',
+    plugin: '7.7.1',
+    es:     '7.7.1',
     lucene: '8.5.1', // https://github.com/elastic/elasticsearch/blob/master/buildSrc/version.properties
     romaji: '0.0.4',
 ]
@@ -39,3 +39,4 @@ dependencies {
 dependencyLicenses.enabled = false
 thirdPartyAudit.enabled = false
 licenseHeaders.enabled = false
+validateNebulaPom.enabled = false
