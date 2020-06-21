@@ -6,16 +6,16 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'org.elasticsearch.gradle:build-tools:7.6.2'
+        classpath 'org.elasticsearch.gradle:build-tools:7.7.0'
     }
 }
 
 apply plugin: 'elasticsearch.esplugin'
 
 def ver = [
-    plugin: '7.6.2',
-    es:     '7.6.2',
-    lucene: '8.4.0', // https://github.com/elastic/elasticsearch/blob/master/buildSrc/version.properties
+    plugin: '7.7.0',
+    es:     '7.7.0',
+    lucene: '8.5.1', // https://github.com/elastic/elasticsearch/blob/master/buildSrc/version.properties
     romaji: '0.0.4',
 ]
 
