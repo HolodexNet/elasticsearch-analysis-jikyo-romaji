@@ -4,6 +4,9 @@
 [See more about Romaji.](https://github.com/jikyo/romaji4j)
 Note that this token filter `jikyo_romaji` assumes to work with `tokenizer: keywrod`.
 
+# Build information
+
+- JDK `17` is used with Elasticsearch 8.1.2
 
 # Supported Elasticsearch versions
 
